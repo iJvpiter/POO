@@ -43,6 +43,18 @@ class Personaje:
             enemigo.morir()
         print("Vida de ", enemigo.__nombre, " es", enemigo.__vida)
 
+# Creando clase "G" que hereda de su clase padre "Personaje"
+class Guerrero(Personaje):
+    # Sobreescribir el contructor
+    def __init__(self, nombre, fuerza, inteligencia, defensa, vida, espada):
+    # Llamar a la clase padre    
+        super().__init__(nombre, fuerza, inteligencia, defensa, vida)
+        self.espada = espada
+
+hercules = Guerrero("Hércules", 80, 80, 100, 100)
+hercules.atributos()
+
+'''
     def get_fuerza(self):
         return self.__fuerza
     
@@ -51,7 +63,7 @@ class Personaje:
           print("Error")
        else:
         self.__fuerza = fuerza
-        
+'''   
 # Variable del constructor vacío de la clase
 mi_personaje = Personaje("Trakalosa de monterrey", 100, 90, 50, 100)
 mi_enemigo = Personaje("La arrolladora", 60, 90, 0, 100)
@@ -64,6 +76,7 @@ mi_enemigo = Personaje("La arrolladora", 60, 90, 0, 100)
 #mi_enemigo.atributos()
 
 #Prueba 1. Sin acceso al atributo fuerza
+'''
 mi_personaje.__Personaje__fuerza = 10
 mi_personaje.atributos()
-
+'''
