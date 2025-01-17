@@ -1,3 +1,4 @@
+
 class Personaje:
     '''
     # Atributos de la clase
@@ -51,8 +52,9 @@ class Guerrero(Personaje):
         super().__init__(nombre, fuerza, inteligencia, defensa, vida)
         self.espada = espada
 
-hercules = Guerrero("Hércules", 80, 80, 100, 100)
+hercules = Guerrero("Hércules", 80, 80, 100, 100, 5)
 hercules.atributos()
+print(hercules.espada)
 
 '''
     def get_fuerza(self):
@@ -65,8 +67,8 @@ hercules.atributos()
         self.__fuerza = fuerza
 '''   
 # Variable del constructor vacío de la clase
-mi_personaje = Personaje("Trakalosa de monterrey", 100, 90, 50, 100)
-mi_enemigo = Personaje("La arrolladora", 60, 90, 0, 100)
+#mi_personaje = Personaje("Trakalosa de monterrey", 100, 90, 50, 100)
+#mi_enemigo = Personaje("La arrolladora", 60, 90, 0, 100)
 
 #print(mi_personaje.morir())
 #print(mi_personaje.esta_vivo())
